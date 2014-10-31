@@ -1,0 +1,74 @@
+<head>
+    <title>Hello famous</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no"> 
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+    {{#HeaderFooterLayout size="[undefined,undefined]" headerSize="44" footerSize="44" id="layout"}}
+        {{> yield 'header'}}
+
+        {{#EdgeSwapper  target="content" 
+                        inTransition=inO 
+                        outTransition=outO 
+                        overlap=true 
+                        size="[undefined,undefined]" }}
+            {{>yield}}
+        {{/EdgeSwapper}}
+
+        {{> yield 'footer'}}
+    {{/HeaderFooterLayout}}
+</template>
+
+<template name="header">
+    {{#Surface target="header" class="bar bar-header bar-positive"}}
+        <!-- <h1 class="title">Twift app</h1> -->
+    {{/Surface}}
+</template>
+
+<template name="footer">
+    {{#Surface target="footer"}}
+    <div class="tabs-striped tabs-background-positive tabs-light">
+        <div class="tabs">
+          <a class="tab-item" href="/">
+            <i class="icon ion-home"></i>
+          </a>
+          <a class="tab-item" href="/about">
+            <i class="icon ion-star"></i>
+          </a>
+          <a class="tab-item" href="/login">
+            <i class="icon ion-gear-a"></i>
+          </a>
+          <a class="tab-item" href="/profile">
+            <i class="icon ion-person"></i>
+          </a>
+        </div>
+    </div>
+    {{/Surface}}
+</template>
+
+<template name="home">
+    {{#Surface size="[400,400]" class="red-bg" align="[.5,.5]" origin="[.5,.5]"}}
+        <h1>Home Page &sdot; <a href="/about">About</a></h1>
+    {{/Surface}}
+</template>
+
+<template name="about">
+    {{#Surface size="[400,400]" class="red-bg" align="[.5,.5]" origin="[.5,.5]"}}
+        <h1>About Page &sdot; <a href="/">Home</a></h1>
+    {{/Surface}}
+</template>
+
+<template name="login">
+    {{#Surface size="[400,400]" class="red-bg" align="[.5,.5]" origin="[.5,.5]"}}
+        <h1>Login page</h1>
+    {{/Surface}}
+</template>
+
+<template name="profile">
+    {{#Surface size="[400,400]" class="red-bg" align="[.5,.5]" origin="[.5,.5]"}}
+        <h1>Profile page</h1>
+    {{/Surface}}
+</template>

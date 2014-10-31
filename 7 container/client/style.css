@@ -1,0 +1,21 @@
+body {
+    background: #8fcdf2;
+    background: url('/back.jpg');
+    background-size: cover;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.main {
+    background: #f27f76;
+}
+
+.red-bg {
+    text-align: center;
+    background-color: #f32121;
+}
+
+.red-bg h1 {
+    color: white;
+    vertical-align: middle;
+    /*line-height: 400px;*/
+}

@@ -1,0 +1,10 @@
+.red-bg {
+    text-align: center;
+    background-color: #f32121;
+}
+
+.red-bg h1 {
+    color: white;
+    vertical-align: middle;
+    /*line-height: 400px;*/
+}

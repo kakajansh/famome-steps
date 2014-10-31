@@ -1,0 +1,22 @@
+<head>
+    <title>Hello famous</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no"> 
+</head>
+
+<body>
+    {{> home}}
+</body>
+
+<template name="home">
+    {{#Surface size="[400, 400]" class="red-bg" align="[.5, .5]" origin="[.5, .5]"}}
+        <h1>Hello world!</h1>
+    {{/Surface}}
+</template>
+
+<template name="home2">
+    {{> Surface template="_home" size="[400, 400]" class="red-bg" align="[.5, .5]" origin="[.5, .5]"}}
+</template>
+
+<template name="_home">
+    <h1>Hello world!</h1>
+</template>
